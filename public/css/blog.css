@@ -131,3 +131,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
+.custom-menu {
+  min-width: 6rem;
+}
+
+.custom-menu a {
+  padding: 5px;
+}

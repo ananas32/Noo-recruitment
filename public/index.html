@@ -25,7 +25,7 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="text-muted" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Subscribe</a>
+                <a class="text-muted" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Переключалка мов</a>
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Noo
@@ -104,45 +104,26 @@
 <main role="main" class="container">
     <div class="row">
         <div class="col-md-8 blog-main">
-            <h3 class="pb-3 mb-4 font-italic border-bottom">
-                From the Firehose
-            </h3>
-
             <div class="blog-post">
-                <h2 class="blog-post-title">Sample blog post</h2>
-                <p class="blog-post-meta">January 1, 2014 by <a href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Mark</a>
-                </p>
-
-                <p>Єслі по шуріку, то ми вам предлагаєм заповнити форму реєстрації подати заявку і ми звами зв'яжемся</p>
+                <h2 class="blog-post-title">Регистрационный бланк</h2>
                 <hr>
-                <p>Cum sociis natoque penatibus et magnis <a href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">dis
-                    parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia
-                    quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus
-                    sit amet fermentum.</p>
-                <blockquote>
-                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare
-                        vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </blockquote>
-                <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+                <p>ПРОСИМ БЛАНК ЗАПОЛНЯТЬ ВНИМАТЕЛЬНО И ЗАГЛАВНЫМИ БУКВАМИ</p>
+                <p>ЗАПОЛНЯЯ ЭТОТ БЛАНК ВЫ РЕГИСТРИРУЕТЕСЬ В НАШУ БАЗУ ДАННЫХ ДЛЯ ПРИЕМА НА РАБОТУ. ВАШИ ДАННЫЕ СОХРАНЯЮТСЯ 1 ГОД.</p>
             </div><!-- /.blog-post -->
 
-            <nav class="blog-pagination">
-                <a class="btn btn-outline-primary" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Older</a>
-                <a class="btn btn-outline-secondary disabled" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Newer</a>
-            </nav>
             <div>
                 <h4 class="mb-3">Billing address</h4>
                 <form class="needs-validation" novalidate="">
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="firstName">First name</label>
+                            <label for="firstName">Ім'я</label>
                             <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="lastName">Last name</label>
+                            <label for="lastName">Прізвище</label>
                             <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
                             <div class="invalid-feedback">
                                 Valid last name is required.
@@ -150,15 +131,19 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="username">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">@</span>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">По-батькові</label>
+                            <input type="text" class="form-control" id="фіва" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
                             </div>
-                            <input type="text" class="form-control" id="username" placeholder="Username" required="">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your username is required.
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Роки:</label>
+                            <input type="text" class="form-control" id="фівавфіаві" placeholder="" value="" required="">
+                            <div class="invalid-feedback" style="display: block">
+                                Valid last name is required.
                             </div>
                         </div>
                     </div>
@@ -172,7 +157,27 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="address">Address</label>
+                        <label for="comment">Уровень образования</label>
+                        <div class="input-group">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Your username is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comment">Спецыальность (квалификация)</label>
+                        <div class="input-group">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Your username is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address">Название учереждения</label>
                         <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
                         <div class="invalid-feedback">
                             Please enter your shipping address.
@@ -180,119 +185,145 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-                        <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                        <label for="address">Водительские права (A,B,C,D) укажите через кому</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                        <div class="invalid-feedback">
+                            Please enter your shipping address.
+                        </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-5 mb-3">
-                            <label for="country">Country</label>
-                            <select class="custom-select d-block w-100" id="country" required="">
-                                <option value="">Choose...</option>
-                                <option>United States</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid country.
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <label for="state">State</label>
-                            <select class="custom-select d-block w-100" id="state" required="">
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="zip">Zip</label>
-                            <input type="text" class="form-control" id="zip" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Zip code required.
-                            </div>
-                        </div>
-                    </div>
                     <hr class="mb-4">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                        <label class="custom-control-label" for="same-address">Водительские права на погрузчик:</label>
                     </div>
                     <hr class="mb-4">
 
-                    <h4 class="mb-3">Payment</h4>
+                    <h4 class="mb-3">Какими владеете языками</h4>
+                    <div>
+                        Английский:
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+                    </div>
+                    <div>
+                        Английский:
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+                    </div>
 
-                    <div class="d-block my-3">
-                        <div class="custom-control custom-radio">
-                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
-                            <label class="custom-control-label" for="credit">Credit card</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                            <label class="custom-control-label" for="debit">Debit card</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                            <label class="custom-control-label" for="paypal">Paypal</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-name">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-                            <small class="text-muted">Full name as displayed on card</small>
-                            <div class="invalid-feedback">
-                                Name on card is required
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-number">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Credit card number is required
+                    <div class="mb-3">
+                        <label for="comment">Другие языки</label>
+                        <div class="input-group">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Your username is required.
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-expiration">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Expiration date required
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-expiration">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Security code required
-                            </div>
-                        </div>
-                    </div>
+                    <!--<div class="d-block my-3">-->
+                        <!--<div class="custom-control custom-radio">-->
+                            <!--<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">-->
+                            <!--<label class="custom-control-label" for="credit">Credit card</label>-->
+                        <!--</div>-->
+                        <!--<div class="custom-control custom-radio">-->
+                            <!--<input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">-->
+                            <!--<label class="custom-control-label" for="debit">Debit card</label>-->
+                        <!--</div>-->
+                        <!--<div class="custom-control custom-radio">-->
+                            <!--<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">-->
+                            <!--<label class="custom-control-label" for="paypal">Paypal</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-6 mb-3">-->
+                            <!--<label for="cc-name">Name on card</label>-->
+                            <!--<input type="text" class="form-control" id="cc-name" placeholder="" required="">-->
+                            <!--<small class="text-muted">Full name as displayed on card</small>-->
+                            <!--<div class="invalid-feedback">-->
+                                <!--Name on card is required-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-6 mb-3">-->
+                            <!--<label for="cc-number">Credit card number</label>-->
+                            <!--<input type="text" class="form-control" id="cc-number" placeholder="" required="">-->
+                            <!--<div class="invalid-feedback">-->
+                                <!--Credit card number is required-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-3 mb-3">-->
+                            <!--<label for="cc-expiration">Expiration</label>-->
+                            <!--<input type="text" class="form-control" id="cc-expiration" placeholder="" required="">-->
+                            <!--<div class="invalid-feedback">-->
+                                <!--Expiration date required-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-3 mb-3">-->
+                            <!--<label for="cc-expiration">CVV</label>-->
+                            <!--<input type="text" class="form-control" id="cc-cvv" placeholder="" required="">-->
+                            <!--<div class="invalid-feedback">-->
+                                <!--Security code required-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="mb-3">-->
+                        <!--<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>-->
+                        <!--<input type="text" class="form-control" id="address2" placeholder="Apartment or suite">-->
+                    <!--</div>-->
+
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5 mb-3">-->
+                            <!--<label for="country">Country</label>-->
+                            <!--<select class="custom-select d-block w-100" id="country" required="">-->
+                                <!--<option value="">Choose...</option>-->
+                                <!--<option>United States</option>-->
+                            <!--</select>-->
+                            <!--<div class="invalid-feedback">-->
+                                <!--Please select a valid country.-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-4 mb-3">-->
+                            <!--<label for="state">State</label>-->
+                            <!--<select class="custom-select d-block w-100" id="state" required="">-->
+                                <!--<option value="">Choose...</option>-->
+                                <!--<option>California</option>-->
+                            <!--</select>-->
+                            <!--<div class="invalid-feedback">-->
+                                <!--Please provide a valid state.-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-3 mb-3">-->
+                            <!--<label for="zip">Zip</label>-->
+                            <!--<input type="text" class="form-control" id="zip" placeholder="" required="">-->
+                            <!--<div class="invalid-feedback">-->
+                                <!--Zip code required.-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Подать заявку</button>
                 </form>
             </div>
+            <br>
 
         </div><!-- /.blog-main -->
 
         <aside class="col-md-4 blog-sidebar">
             <div class="p-3 mb-3 bg-light rounded">
-                <h4 class="font-italic">About</h4>
-                <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus
-                    sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <h4 class="font-italic">Про нас</h4>
+                <p class="mb-0">Ми надаєм свої послуги для пошуку роботи за кордоном.</p>
+                <p>ми гарнтуєм вам офіційну зароблі</p>
             </div>
 
             <div class="p-3">
-                <h4 class="font-italic">Ми в соцсетях</h4>
+                <h4 class="font-italic">Контакты: </h4>
                 <ol class="list-unstyled">
-                    <li><a href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">GitHub</a></li>
-                    <li><a href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Twitter</a></li>
-                    <li><a href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Facebook</a></li>
+                    <li>E-mail: work.aleh@gmail.com</li>
+                    <li>Cím: 8107 Bratislava, Blumentálska 5., SKCím: 9094 Tápszentmiklós, fő u. 38, HU</li>
+                    <li>Tel: +380 66 267 35 28</li>
                 </ol>
             </div>
         </aside><!-- /.blog-sidebar -->

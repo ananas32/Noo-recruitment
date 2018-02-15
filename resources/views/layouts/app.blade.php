@@ -59,7 +59,16 @@
             </div>
         </div>
     </header>
-
+    <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-center">
+            <a class="p-2 text-muted" href="">Вакансії</a>
+            <a class="p-2 text-muted" href="">Візи</a>
+            <a class="p-2 text-muted" href="">Новини</a>
+            <a class="p-2 text-muted" href="">Контакти</a>
+            <a class="p-2 text-muted" href="">Партнери</a>
+            <a class="p-2 text-muted" href="">о нас</a>
+        </nav>
+    </div>
     @yield('body')
 
     <footer class="blog-footer">

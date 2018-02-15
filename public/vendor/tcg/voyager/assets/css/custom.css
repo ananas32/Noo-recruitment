@@ -1,0 +1,33 @@
+.select2-container--default .select2-selection--single {
+    border: 1px solid #e4eaec;
+    border-right: 1px solid #f1f1f1;
+    border-radius: 4px;
+    height: 34px;
+    padding: 3px;
+}
+body, html {
+    color: #333;
+}
+.form-control {
+    color: #333;
+}
+.table {
+    color: #333;
+}
+/* TinyMCE */
+div.mce-fullscreen {
+    z-index: 10000;
+}
+
+/* Maxlength */
+.maxlength-full {
+    background-color: #fee;
+}
+
+body, html {
+    font-weight: 400;
+}
+
+.language-selector > .btn-group > .active{
+    background: #337ab7;
+}

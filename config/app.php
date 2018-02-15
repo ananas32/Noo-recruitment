@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +168,10 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
 
+        TCG\Voyager\VoyagerServiceProvider::class,
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -225,7 +229,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Voyager' => TCG\Voyager\Facades\Voyager::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => config('voyager.prefix', 'admin')], function () {
+    Voyager::routes();
+});
 
 Route::get('/', function () {
     return view('pages.home');

@@ -56,7 +56,6 @@
         </div>
     </div>
 </div>
-</div>
 
 <main role="main" class="container">
     <div class="row">

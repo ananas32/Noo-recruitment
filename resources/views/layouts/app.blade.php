@@ -42,7 +42,7 @@
                 <!--<a class="text-muted" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Переключалка мов</a>-->
             </div>
             <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Noo
+                <a class="blog-header-logo text-dark" href="/">Noo
                     recruitment</a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
@@ -61,12 +61,9 @@
     </header>
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-center">
-            <a class="p-2 text-muted" href="">Вакансії</a>
-            <a class="p-2 text-muted" href="">Візи</a>
-            <a class="p-2 text-muted" href="">Новини</a>
-            <a class="p-2 text-muted" href="">Контакти</a>
-            <a class="p-2 text-muted" href="">Партнери</a>
-            <a class="p-2 text-muted" href="">о нас</a>
+            @foreach($headMenu as $link)
+                <a class="p-2 text-muted" href="{{ $link->slug }}">{{ $link->title }}</a>
+            @endforeach
         </nav>
     </div>
     @yield('body')

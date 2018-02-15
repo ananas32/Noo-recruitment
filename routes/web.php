@@ -17,3 +17,5 @@ Route::group(['prefix' => config('voyager.prefix', 'admin')], function () {
 Route::get('/', function () {
     return view('pages.home');
 });
+
+Route::get('/{page}', 'PageController@page');

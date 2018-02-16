@@ -54,8 +54,9 @@
                         <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" href="http://bootstrap-4.ru/docs/4.0/examples/blog/#">Sign
-                    up</a>
+                <a class="btn btn-sm btn-outline-secondary" href="{{ route('add-resume') }}">{{ __('Я роботодатєль') }}</a>
+
+                <a class="btn btn-sm btn-outline-secondary" href="{{ route('add-resume') }}">{{ __('Отправить резюме') }}</a>
             </div>
         </div>
     </header>

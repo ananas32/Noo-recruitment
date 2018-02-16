@@ -7,19 +7,19 @@ $.ajaxSetup({
 $( document ).ready(function() {
     $(".send-register-form-vacancy").click(
         function(){
-            sendFrom('register-form-vacancy', '/registration-vacancy', '', 'success-send');
+            sendFrom('register-form-vacancy', '/registration-vacancy', '', 'success-send', 'danger-send');
             return false;
         }
     );
 });
 
 // Отправка форми AJAX (contacts, forTalent)
-function sendFrom(form_id, url, prefix, alertId) {
+function sendFrom(form_class, url, prefix, successAlertId, dangerAlertId) {
     jQuery.ajax({
         url: url,
         type: "POST",
         dataType: "html",
-        data: jQuery("." + form_id).serialize(),
+        data: jQuery("." + form_class).serialize(),
         success: function (response) {
             console.log(response);
             var res = JSON.parse(response);
@@ -35,16 +35,18 @@ function sendFrom(form_id, url, prefix, alertId) {
                         })
                     }
                 }
+                $("#" + dangerAlertId).css({'display': 'block'});
+                topFunction();
             } else {
-                console.log(url);
-                $("#" + alertId).css({'display': 'block'});
-                if (alertId === 'account-alert') {
+                $("#" + dangerAlertId).css({'display': 'none'});
+                $("#" + successAlertId).css({'display': 'block'});
+                if (successAlertId === 'account-alert') {
                     var login = $("input[name='login']").val();
                     var server = $("input[name='server']").val();
                     addAccount(login, server);
                 }
-                jQuery("#" + form_id)[0].reset();
-                deleteErrorResponse($("#" + form_id));
+                jQuery("#" + form_class)[0].reset();
+                deleteErrorResponse($("#" + form_class));
             }
         },
         error: function (response) {
@@ -68,4 +70,10 @@ function is_object(mixed_var){
     } else {
         return (mixed_var !== null) && (typeof( mixed_var ) == 'object');
     }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }

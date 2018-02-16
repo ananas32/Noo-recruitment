@@ -131,5 +131,6 @@ return [
     */
 
     'attributes' => [
+        'name' => 'имя'
     ],
 ];

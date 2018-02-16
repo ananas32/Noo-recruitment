@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('add-resume', function () {
    return view('pages.add-resume');
-});
+})->name('add-resume');
 
 Route::post('/registration-vacancy', 'RegistrationVacancyController@registerVacancy');
 

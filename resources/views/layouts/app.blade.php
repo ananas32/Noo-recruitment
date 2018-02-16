@@ -54,7 +54,7 @@
                         <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" href="{{ route('add-resume') }}">{{ __('Я роботодатєль') }}</a>
+                <a class="btn btn-sm btn-outline-secondary" href="{{ route('add-vacancy') }}">{{ __('Я роботодатєль') }}</a>
 
                 <a class="btn btn-sm btn-outline-secondary" href="{{ route('add-resume') }}">{{ __('Отправить резюме') }}</a>
             </div>

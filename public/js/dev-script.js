@@ -7,7 +7,7 @@ $.ajaxSetup({
 $( document ).ready(function() {
     $(".send-register-form-vacancy").click(
         function(){
-            sendFrom('register-form-vacancy', '/registration-vacancy', '', 'success-send', 'danger-send');
+            sendFrom('register-form-vacancy', '/registration-resume', '', 'success-send', 'danger-send');
             return false;
         }
     );

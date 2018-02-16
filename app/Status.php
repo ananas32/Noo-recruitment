@@ -10,7 +10,7 @@ class Status extends Model
     use EdipresseTranslatable;
 
     public $timestamps = false;
-    protected $translatable = ['title', 'body', 'meta_title', 'meta_keywords', 'meta_description'];
+    protected $translatable = ['name'];
     protected $with = ['translations'];
-
+    protected $table = 'status';
 }

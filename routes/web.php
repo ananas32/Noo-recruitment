@@ -18,4 +18,11 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+Route::get('add-resume', function () {
+   return view('pages.add-resume');
+});
+
+Route::post('/registration-vacancy', 'RegistrationVacancyController@registerVacancy');
+
+
 Route::get('/{page}', 'PageController@page');

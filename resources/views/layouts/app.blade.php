@@ -84,6 +84,9 @@
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/holder.min.js"></script>
+<script src="{{ asset('/js/jquery.min.js') }}"></script>
+<script src="{{ asset('/js/dev-script.js') }}"></script>
+
 <script>
     //      Holder.addTheme('thumb', {
     //        bg: '#55595c',

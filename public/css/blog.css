@@ -138,3 +138,8 @@ h1, h2, h3, h4, h5, h6 {
 .custom-menu a {
   padding: 5px;
 }
+
+.input-error {
+  border-color: #FF7373;
+  box-shadow: 0 0 2px 3px #FF7373;
+}

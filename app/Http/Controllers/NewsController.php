@@ -9,14 +9,12 @@ use Illuminate\Pagination\Paginator;
 
 class NewsController extends Controller
 {
-//    public function newsList()
-//    {
-//        $page = Page::where('slug', 'news')->firstOrFail();
-//
-//        $newsList = Article::activeList()->paginate();
-//        dd($newsList);
-//        return view('pages.news', compact('page', 'newsList'));
-//    }
+    public function news($slug)
+    {
+        $news = Article::whereTranslation('slug', '=', $slug)->activeList()->firstOrFail();
+
+        return view('pages.news-slug', compact('news'));
+    }
 
     public function newsList($currentPage = 1)
     {

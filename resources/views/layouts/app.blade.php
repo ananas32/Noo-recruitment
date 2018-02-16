@@ -13,11 +13,11 @@
     <title>Form</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/css" rel="stylesheet">
-    <link href="./css/blog.css" rel="stylesheet">
+    <link href="{{ asset('css/css') }}" rel="stylesheet">
+    <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -63,7 +63,7 @@
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-center">
             @foreach($headMenu as $link)
-                <a class="p-2 text-muted" href="{{ $link->slug }}">{{ $link->title }}</a>
+                <a class="p-2 text-muted" href="/{{ $link->slug }}">{{ $link->title }}</a>
             @endforeach
         </nav>
     </div>
@@ -80,11 +80,11 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/js/jquery-3.2.1.slim.min.js"></script>
+<script src="{{ asset('js/jquery-3.2.1.slim.min.js') }}"></script>
 <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="./js/popper.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/holder.min.js"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/holder.min.js') }}"></script>
 <script src="{{ asset('/js/jquery.min.js') }}"></script>
 <script src="{{ asset('/js/dev-script.js') }}"></script>
 

@@ -35,6 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/news', 'NewsController@newsList');
 Route::get('/news/page/{page}', 'NewsController@newsList')
     ->where('page', '[0-9]+');
+Route::get('/news/{slug}', 'NewsController@news');
 
 Route::get('/{page}', 'PageController@page');
 

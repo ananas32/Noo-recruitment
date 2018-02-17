@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="content-block">
-                    <h3><span>News</span></h3>
+                    <h3><span>{{ $page->title }}</span></h3>
                     {{--col-xs-12 col-xsm-6 col-sm-3--}}
                         @foreach($news as $item)
                             <div class="row">

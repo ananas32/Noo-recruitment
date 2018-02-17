@@ -11,8 +11,10 @@ class RegistrationVacancyController extends Controller
 	{
 		$validator = Validator::make($request->all(),
 			array(
-				'name' => 'required|alpha|min:2|max:255',
-				'surname' => 'required|alpha|min:2|max:255',
+				'name' => 'required|alpha|min:2|max:190',
+				'surname' => 'required|alpha|min:2|max:190',
+                'middle_name' => 'required|alpha|min:2|max:190',
+                'age' => 'required|numeric'
 			)
 		);
 		if ($validator->fails()) {

@@ -6,7 +6,7 @@
         <div class="row">
 
             <div class="col-xs-12">
-                <div class="blog-post">
+                <div class="content-block">
                     <h2 class="text-center">{{ $news->title }}</h2>
                     <div class="row text-justify"  style="padding: 10px">
                         <div class="row">
@@ -34,4 +34,5 @@
 
         </div>
     </div>
+
 @stop

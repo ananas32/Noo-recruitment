@@ -2,18 +2,14 @@
 
 @section('body')
     <div class="container">
-
         <div class="row">
-
-            <div class="blog-main">
-
-                <div class="blog-post">
-                    <h2 class="text-center">{{ $page->title }}</h2>
+            <div class="col-xs-12">
+                <div class="content-block">
+                    <h3><span>{{ $page->title }}</span></h3>
+                    <div class="info">{{ $page->title }}</div>
                     {!! $page->body !!}
                 </div>
-
-            </div><!-- /.blog-main -->
-
-        </div><!-- /.row -->
+            </div>
+        </div>
     </div>
 @stop

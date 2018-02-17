@@ -19,7 +19,7 @@
                 <div class="logo">
                     <a href="/"><img src="{{ asset('assets/img/logo.png') }}" alt=""></a>
                     <a href="/" class="title">
-                        <h1>Optimal-tariff</h1>
+                        <h1>AntHill Hungary</h1>
                         <h2>{{ trans('header.system_search') }}</h2>
                     </a>
                     <div class="menu-bars">

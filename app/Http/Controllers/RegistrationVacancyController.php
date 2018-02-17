@@ -14,7 +14,8 @@ class RegistrationVacancyController extends Controller
 				'name' => 'required|alpha|min:2|max:190',
 				'surname' => 'required|alpha|min:2|max:190',
                 'middle_name' => 'required|alpha|min:2|max:190',
-                'age' => 'required|numeric'
+                'age' => 'required|numeric',
+                'email' => 'required|email|max:255|min:4'
 			)
 		);
 		if ($validator->fails()) {

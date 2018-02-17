@@ -36,7 +36,6 @@ function sendFrom(form_class, url, prefix, successAlertId, dangerAlertId) {
                     }
                 }
                 $("#" + dangerAlertId).css({'display': 'block'});
-                topFunction();
             } else {
                 $("#" + dangerAlertId).css({'display': 'none'});
                 $("#" + successAlertId).css({'display': 'block'});
@@ -72,8 +71,32 @@ function is_object(mixed_var){
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+function bs_input_file() {
+    $(".input-file").before(
+        function() {
+            if ( ! $(this).prev().hasClass('input-ghost') ) {
+                var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+                element.attr("name",$(this).attr("name"));
+                element.change(function(){
+                    element.next(element).find('input').val((element.val()).split('\\').pop());
+                });
+                $(this).find("button.btn-choose").click(function(){
+                    element.click();
+                });
+                $(this).find("button.btn-reset").click(function(){
+                    element.val(null);
+                    $(this).parents(".input-file").find('input').val('');
+                });
+                $(this).find('input').css("cursor","pointer");
+                $(this).find('input').mousedown(function() {
+                    $(this).parents('.input-file').prev().click();
+                    return false;
+                });
+                return element;
+            }
+        }
+    );
 }
+$(function() {
+    bs_input_file();
+});

@@ -563,9 +563,7 @@ body .content-block .comment .answer {
 body .content-block .write-to-us {
     margin-top: 10px;
 }
-body .content-block .write-to-us button {
-    float: right;
-}
+
 body .content-block .write-to-us label {
     display: inline-block;
 }

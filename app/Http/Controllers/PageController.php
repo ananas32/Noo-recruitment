@@ -7,19 +7,30 @@ use App\Page;
 
 class PageController extends Controller
 {
-    public function home()
+    public function workList($currentPage = 1)
     {
-//        $home = Page::where('slug', 'home')->firstOrFail();
+        $page = Page::where('slug', 'work')->firstOrFail();
+
+//        $categoryId = Category::where('slug', 'news')->value('id');
 //
-//        $freshArticle = Article::freshMain(0, 5)->get();
+//        $limit = (int) \Voyager::setting('news_number_in_list');
 //
-//        $data = [
-//            'styles'  => config('resources.home.styles'),
-//            'scripts' => config('resources.home.scripts'),
-//            'freshArticle' => $freshArticle
-//        ];
+//        Paginator::currentPageResolver(function() use ($currentPage) {
+//            return $currentPage;
+//        });
 //
-//        return view('pages.home', $data);
+//        $news = Article::where('category_id', $categoryId)
+//            ->active()
+//            ->orderBy('id', 'DESC')
+//            ->paginate($limit);
+//
+//        if (!count($news)) {
+//            abort(404);
+//        }
+//
+//        $news->setPath('/news/page/');
+
+        return view('pages.work', compact('page','news'));
     }
 
     public function page($slug)

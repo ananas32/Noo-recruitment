@@ -696,3 +696,14 @@ body .developers a:hover {
 .red-text {
     color: red;
 }
+
+.green-text {
+    color: green;
+}
+
+.border-line {
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    padding-right: 10px;
+}
+

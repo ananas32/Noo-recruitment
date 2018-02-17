@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('add-vacancy');
 });
 
+Route::get('/work', 'PageController@workList')->name('work');
+
 Route::get('/news', 'NewsController@newsList');
 Route::get('/news/page/{page}', 'NewsController@newsList')
     ->where('page', '[0-9]+');

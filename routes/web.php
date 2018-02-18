@@ -25,6 +25,7 @@ Route::get('add-resume', function () {
 })->name('add-resume');
 
 Route::post('/registration-resume', 'RegistrationVacancyController@registerVacancy');
+Route::post('/question-vacancy', 'RegistrationVacancyController@questionVacancy');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('add-vacancy', function () {
@@ -32,7 +33,9 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('add-vacancy');
 });
 
-Route::get('/work', 'PageController@workList')->name('work');
+Route::get('/work', 'PageController@workList')->name('works');
+Route::get('/work/{slug}', 'PageController@work')->name('work');
+
 
 Route::get('/news', 'NewsController@newsList');
 Route::get('/news/page/{page}', 'NewsController@newsList')

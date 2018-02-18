@@ -31,4 +31,24 @@ class RegistrationVacancyController extends Controller
 //				'email' => 'required|email|max:255|min:4',
 //				'message' => 'required|min:10'
 	}
+
+    public function questionVacancy(Request $request)
+    {
+        $validator = Validator::make($request->all(),
+            array(
+                'name' => 'required|alpha|min:2|max:190',
+                'contact' => 'required',
+                'question' => 'required|min:10|max:255',
+            )
+        );
+        if ($validator->fails()) {
+            return response()->json([
+                'response' => $validator->messages()
+            ]);
+        } else {
+            return response()->json([
+                'response' => 'Всьо є дуже файно'
+            ]);
+        }
+    }
 }

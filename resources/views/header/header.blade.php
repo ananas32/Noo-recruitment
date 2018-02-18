@@ -31,8 +31,7 @@
             </div>
             <div class="col-xs-12 col-md-4 text-center">
                 <p style="padding-top: 2%">067 436 87 46</p>
-                <p>067 436 87 46</p>
-                <p>067 436 87 46</p>
+                <p>+380 66 267 35 28</p>
             </div>
             <div class="hidden-xs hidden-xsm hidden-sm col-md-4">
                 <div class="cite text-right" style="padding-top: 2%">
@@ -58,8 +57,6 @@
             @foreach($headMenu as $link)
                 <li><a href="/{{ $link->slug }}">{{ $link->title }}</a></li>
             @endforeach
-            <li class="set-region"><a href="#">{{ trans('menu.choose_region') }} <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            </li>
             <li class="region" id="region">
                 <ul>
                     @if(isset($regions))

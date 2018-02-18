@@ -8,17 +8,56 @@
                     <h3><span>{{ $page->title }}</span></h3>
                     {{--col-xs-12 col-xsm-6 col-sm-3--}}
                         {{--@foreach($news as $item)--}}
+                            <div class="row">
+                                <div class="info">
+                                    <form class="write-to-us" action="/action_page.php">
+                                        <div class="row">
+                                            <div class="col-md-2 mb-6">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="{{ __('Ключевое слово') }}" id="email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-6">
+                                                <div class="form-group">
+                                                    <select name="country" id="country" class="form-control">
+                                                        <option value="">{{ __('Все страны') }}</option>
+                                                        <option value="0">Kurwiya</option>
+                                                        <option value="1">Україна</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-6">
+                                                <div class="form-group">
+                                                    <select name="group" class="form-control" id="sel1">
+                                                        <option value="0">{{ __('Все специализации') }}</option>
+                                                        <option value="1">Шлюха</option>
+                                                        <option value="2">Підр</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 mb-6">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="{{ __('Зарплата от ') }}$" id="email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 mb-6">
+                                                <button type="submit" style="width: 100%" class="btn btn-warning">{{ __('Найти вакансии') }}</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <div class="row" style="background: #fff; padding: 1%; border: solid 1px #B3B3B3;">
                                 <div class="col-xs-12 col-xsm-8 col-sm-8 text-center">
-                                    <p class="text-uppercase">Описание</p>
+                                    <p class="text-uppercase">{{ __('Описание') }}</p>
                                 </div>
                                 <div class="col-xs-12 col-xsm-2 col-sm-2 text-justify">
                                     <p class="text-uppercase text-center">
-                                        Страна
+                                        {{ __('Страна') }}
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-xsm-2 col-sm-2 text-justify">
-                                    <p class="text-center">ЗП</p>
+                                    <p class="text-center">{{ __('Зарплата') }}</p>
                                 </div>
                             </div>
                             <div class="row" style="background: #fff; padding: 1%; border: solid 1px #B3B3B3;">

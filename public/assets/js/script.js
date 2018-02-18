@@ -11,6 +11,13 @@ $( document ).ready(function() {
             return false;
         }
     );
+
+    $(".send-question-form-vacancy").click(
+        function(){
+            sendFrom('question-vacancy', '/question-vacancy', '', 'success-send', 'danger-send');
+            return false;
+        }
+    );
 });
 
 // Отправка форми AJAX (contacts, forTalent)
@@ -54,7 +61,7 @@ function sendFrom(form_class, url, prefix, successAlertId, dangerAlertId) {
     });
 }
 
-$('form input[type="text"], input[type="password"], input[type="email"], textarea[name="message"]').on('click', function () {
+$('form input[type="text"], input[type="password"], input[type="email"], textarea').on('click', function () {
     deleteError($(this));
 });
 function deleteError(form) {

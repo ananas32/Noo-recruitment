@@ -7,6 +7,11 @@ use App\Page;
 
 class PageController extends Controller
 {
+    public function work($slug)
+    {
+        return view('pages.work-slug');
+    }
+
     public function workList($currentPage = 1)
     {
         $page = Page::where('slug', 'work')->firstOrFail();

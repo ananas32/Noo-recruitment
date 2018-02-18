@@ -36,11 +36,11 @@
             <div class="hidden-xs hidden-xsm hidden-sm col-md-4">
                 <div class="cite text-right" style="padding-top: 2%">
                     <div style="padding-bottom: 1%">
-                        <a class="btn btn-default" href="{{ route('add-vacancy') }}">{{ __('Я роботодатєль') }}</a>
-                        <a class="btn btn-danger" href="{{ route('add-resume') }}">{{ __('Отправить резюме') }}</a>
+                        <a class="btn btn-default header-button" href="{{ route('add-vacancy') }}">{{ __('Я роботодатєль') }}</a>
+                        <a class="btn btn-danger header-button" href="{{ route('add-resume') }}">{{ __('Отправить резюме') }}</a>
                     </div>
                     <div>
-                        <a class="btn btn-success" href="">{{ __('Обратный звонок') }}</a>
+                        <a class="btn btn-success header-button" href="">{{ __('Обратный звонок') }}</a>
                     </div>
                 </div>
             </div>

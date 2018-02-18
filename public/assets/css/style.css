@@ -707,3 +707,34 @@ body .developers a:hover {
     padding-right: 10px;
 }
 
+.header-button {
+    min-width: 150px;
+}
+
+.vacancy-category {
+    border: 1px solid #DFDFDF;
+    background: #fff;
+    position: relative;
+    border-top: none;
+}
+.vacancy-category li {
+    list-style: none;
+}
+
+.vacancy-category li a {
+    color: #2D322F;
+}
+
+.vacancy-category-title {
+    background: #FF8D00;
+    margin: 0;
+}
+
+.vacancy-category-title a{
+    color: #2D322F;
+    margin: 10px;
+}
+
+.vacancy-category ul{
+    padding-left:10px;
+}

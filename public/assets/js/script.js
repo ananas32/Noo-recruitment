@@ -107,3 +107,13 @@ function bs_input_file() {
 $(function() {
     bs_input_file();
 });
+
+$( document ).ready(function() {
+    $('.isotope').isotope({
+        itemSelector : '.item',
+        layoutMode: 'masonry',
+        masonry: {
+            columnWidth: 110,
+        }
+    });
+});

@@ -10,3 +10,4 @@
 <script src="{{ asset('assets/js/script.js') }}"></script>
 <script src="{{ asset('assets/js/jquery-2.2.1.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
+<script src="{{ asset('assets/js/isotope.min.js') }}"></script>

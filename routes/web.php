@@ -16,9 +16,7 @@ Route::group(['prefix' => config('voyager.prefix', 'admin')], function () {
     Voyager::routes();
 });
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('add-resume', function () {
    return view('pages.add-resume');

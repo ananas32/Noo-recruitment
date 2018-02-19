@@ -19,8 +19,5 @@ class Page extends Model
         return $this->where('menu', 1)
             ->orderBy('order', 'ASC')->get();
     }
-
-    public function index() {
-        dd();
-    }
+    
 }

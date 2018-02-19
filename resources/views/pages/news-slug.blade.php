@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
+@section('meta_title', $news->meta_title)
+@section('meta_description', $news->meta_description)
+@section('meta_keywords', $news->meta_keywords)
+
 @section('body')
     <div class="container">
-
         <div class="row">
-
             <div class="col-xs-12">
                 <div class="content-block">
                     <h2 class="text-center">{{ $news->title }}</h2>

@@ -2,6 +2,10 @@
 
 @section('body')
 
+@section('meta_title', $page->meta_title)
+@section('meta_description', $page->meta_description)
+@section('meta_keywords', $page->meta_keywords)
+
 <div class="container">
     <div class="row">
         <div class="col-xs-12">

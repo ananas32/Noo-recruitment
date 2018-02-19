@@ -1,5 +1,24 @@
 @extends('layouts.app')
 
+@section('meta_title', $page->meta_title)
+@section('meta_description', $page->meta_description)
+@section('meta_keywords', $page->meta_keywords)
+
+@section('meta')
+    @if (Request::is('*/page/*'))
+        <link rel="canonical" href="{{ url( str_copy_before(Request::path(), '/page/') ) }}" />
+    @else
+        <link rel="canonical" href="{{ url(Request::path()) }}" />
+    @endif
+
+    @if ($news->previousPageUrl())
+        <link rel="prev" href="{{ rewrite_page_url($news->previousPageUrl()) }}">
+    @endif
+    @if ($news->nextPageUrl())
+        <link rel="next" href="{{ rewrite_page_url($news->nextPageUrl()) }}">
+    @endif
+@endsection
+
 @section('body')
     <div class="container">
         <div class="row">

@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('meta_title', $page->meta_title)
-@section('meta_description', $page->meta_description)
-@section('meta_keywords', $page->meta_keywords)
+{{--@section('meta_title', $page->meta_title)--}}
+{{--@section('meta_description', $page->meta_description)--}}
+{{--@section('meta_keywords', $page->meta_keywords)--}}
 
 @section('body')
     <div class="container">
@@ -17,7 +17,7 @@
                                 <aside class="col-md-8 blog-sidebar">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img class="img-responsive img-thumbnail" src="http://noo-recruitment/storage/crop/articles/home_1_norm.jpg" alt="">
+                                            <img class="img-responsive img-thumbnail" src="http://recrui.loc/storage/crop/articles/home_1_norm.jpg" alt="">
                                         </div>
                                         <div class="col-md-6">
                                             <h4 class="font-italic">Назва вакансии</h4>

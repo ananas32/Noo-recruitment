@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class VacancyTranslation extends Model
 {
     public $timestamps = false;
-    protected $fillable = ['name_vacancy', 'description'];
+    protected $fillable = ['name_vacancy', 'description', 'experience'];
 }

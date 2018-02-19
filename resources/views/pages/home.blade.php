@@ -60,38 +60,18 @@
                     <br>
                     <h3>РАБОТА ПО СТРАНАМ</h3>
                     <div class="row">
-                        <div class="col-md-3">
-                            <div>
-                                <a href="http://work-garant.com/rabota/polsha/">
-                                    <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2015/05/poland-450x300.jpg" alt="poland">
-                                </a>
-                            </div>
-                            <h4 class="text-center"><a href="http://work-garant.com/rabota/polsha/">Работа в Польше</a></h4>
-                        </div>
-                        <div class="col-md-3">
-                            <div>
-                                <a href="http://work-garant.com/rabota/polsha/">
-                                    <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2015/10/Litva-450x300.jpg" alt="poland">
-                                </a>
-                            </div>
-                            <h4 class="text-center"><a href="http://work-garant.com/rabota/polsha/">РАБОТА В ЛИТВЕ</a></h4>
-                        </div>
-                        <div class="col-md-3">
-                            <div>
-                                <a href="http://work-garant.com/rabota/polsha/">
-                                    <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2017/07/latvia-450x300.jpg" alt="poland">
-                                </a>
-                            </div>
-                            <h4 class="text-center"><a href="http://work-garant.com/rabota/polsha/">РАБОТА В ЛАТВИИ</a></h4>
-                        </div>
-                        <div class="col-md-3">
-                            <div>
-                                <a href="http://work-garant.com/rabota/polsha/">
-                                    <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2015/10/Czechia-450x300.png" alt="poland">
-                                </a>
-                            </div>
-                            <h4 class="text-center"><a href="http://work-garant.com/rabota/polsha/">РАБОТА В ЧЕХИИ</a></h4>
-                        </div>
+                        @if(count($countries))
+                            @foreach($countries as $country)
+                                <div class="col-md-3">
+                                    <div>
+                                        <a href="{{ url('/work') }}/{{ $country->slug }}">
+                                            <img class="img-responsive img-thumbnail" src="{{ $country->getCroppedPhoto('avatar', 'norm') }}" alt="{{ $country->name }}">
+                                        </a>
+                                    </div>
+                                    <h4 class="text-center"><a href="http://work-garant.com/rabota/polsha/">Работа в Польше</a></h4>
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
                 <div class="info">

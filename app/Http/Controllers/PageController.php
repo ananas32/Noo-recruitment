@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
+use App\Country;
 use App\Page;
+use App\Vacancy;
+use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+
 
 class PageController extends Controller
 {
@@ -12,30 +16,50 @@ class PageController extends Controller
         return view('pages.work-slug');
     }
 
-    public function workList($currentPage = 1)
+    public function workList(Request $request, $currentPage = 1)
     {
+        $formParam  = $request->all();
+        $countries = Country::get();
         $page = Page::where('slug', 'work')->firstOrFail();
 
-//        $categoryId = Category::where('slug', 'news')->value('id');
-//
-//        $limit = (int) \Voyager::setting('news_number_in_list');
-//
-//        Paginator::currentPageResolver(function() use ($currentPage) {
-//            return $currentPage;
-//        });
-//
-//        $news = Article::where('category_id', $categoryId)
-//            ->active()
-//            ->orderBy('id', 'DESC')
-//            ->paginate($limit);
-//
-//        if (!count($news)) {
-//            abort(404);
-//        }
-//
-//        $news->setPath('/news/page/');
+        $query = Vacancy::join('companies', 'companies.id', '=', 'vacancies.field_id');
 
-        return view('pages.work', compact('page','news'));
+        if ($request->country) {
+            $query = $query->where('companies.country_id', $request->country);
+        }
+
+        if($request->payment) {
+            $query = $query->where('payment', '>', $request->payment);
+        }
+
+        if($request->name_vacancy) {
+            $query = $query->whereTranslation('name_vacancy', 'LIKE', "%$request->name_vacancy%");
+        }
+
+        if($request->specialization) {
+
+        }
+
+        Paginator::currentPageResolver(function() use ($currentPage) {
+            return $currentPage;
+        });
+
+        $vacancies = $query
+            ->select('vacancies.*')
+            ->orderBy('vacancies.id', 'DESC')
+            ->paginate(2);
+
+        $vacancies->setPath('/work/page/');
+
+        $data = [
+            'page' => $page,
+            'vacancies' => $vacancies,
+            'countries' => $countries
+        ];
+//        dd($formParam);
+        $data = array_merge($data, $formParam);
+
+        return view('pages.work', $data);
     }
 
     public function page($slug)

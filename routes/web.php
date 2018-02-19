@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::get('/work', 'PageController@workList')->name('works');
+Route::get('/work/page/{page}', 'PageController@workList')
+    ->where('page', '[0-9]+');
 Route::get('/work/{slug}', 'PageController@work')->name('work');
 
 

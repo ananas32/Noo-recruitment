@@ -18,12 +18,11 @@ Route::group(['prefix' => config('voyager.prefix', 'admin')], function () {
 
 Route::get('/', 'HomeController@index');
 
-Route::get('add-resume', function () {
-   return view('pages.add-resume');
-})->name('add-resume');
+Route::get('add-resume', 'RegistrationVacancyController@addResume')->name('add-resume');
 
 Route::post('/registration-resume', 'RegistrationVacancyController@registerVacancy');
 Route::post('/question-vacancy', 'RegistrationVacancyController@questionVacancy');
+Route::post('/call-me', 'RegistrationVacancyController@callMe');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('add-vacancy', function () {

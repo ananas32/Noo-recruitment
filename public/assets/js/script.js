@@ -18,6 +18,13 @@ $( document ).ready(function() {
             return false;
         }
     );
+
+    $(".send-call-me").click(
+        function(){
+            sendFrom('call-me', '/call-me', '', 'success-call-me', '');
+            return false;
+        }
+    );
 });
 
 // Отправка форми AJAX (contacts, forTalent)

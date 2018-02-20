@@ -39,8 +39,49 @@
                         <a class="btn btn-default header-button" href="{{ route('add-vacancy') }}">{{ __('Я роботодатєль') }}</a>
                         <a class="btn btn-danger header-button" href="{{ route('add-resume') }}">{{ __('Отправить резюме') }}</a>
                     </div>
+
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">{{ __('Напишите ваш номер и мы вам позвоним') }}</h4>
+                                </div>
+                                <div class="alert alert-success fade in alert-dismissable text-center" id="success-call-me" style="margin-top:18px; display: block">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true" style="font-size:20px">×</span>
+                                    </button>
+                                    {{ __('Наш менеджер вам позвонит') }}
+                                </div>
+                                <form class="call-me">
+                                    {{ csrf_field() }}
+                                    <div class="modal-body">
+                                        <div class="text-left">
+                                            <label for="your_name">{{ __('Ваше имя') }}</label>
+                                            <input type="text" class="form-control" name="your_name" id="your_name" required="">
+                                            <div class="red-text error"></div>
+                                        </div>
+                                        <div class="text-left">
+                                            <label for="your_phone">{{ __('Телефон') }}</label>
+                                            <input type="text" class="form-control" name="your_phone" id="your_phone" required="">
+                                            <div class="red-text error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-warning send-call-me">{{ __('Позвоните мне') }}</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
                     <div>
-                        <a class="btn btn-success header-button" href="">{{ __('Обратный звонок') }}</a>
+                        <!-- Trigger the modal with a button -->
+                        <a class="btn btn-success header-button" data-toggle="modal" data-target="#myModal">{{ __('Обратный звонок') }}</a>
                     </div>
                 </div>
             </div>

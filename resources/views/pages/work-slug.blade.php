@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-{{--@section('meta_title', $page->meta_title)--}}
+@section('meta_title', $vacancy->name_vacancy)
 {{--@section('meta_description', $page->meta_description)--}}
 {{--@section('meta_keywords', $page->meta_keywords)--}}
 
@@ -17,53 +17,48 @@
                                 <aside class="col-md-8 blog-sidebar">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img class="img-responsive img-thumbnail" src="http://recrui.loc/storage/crop/articles/home_1_norm.jpg" alt="">
+                                            <img class="img-responsive img-thumbnail" src="{{ $vacancy->getCroppedPhoto('home', 'norm') }}" alt="">
                                         </div>
                                         <div class="col-md-6">
-                                            <h4 class="font-italic">Назва вакансии</h4>
-                                            <p>{{ __('Зарплата') }}: USD = 2uah</p>
-                                            <p>{{ __('Страна') }}: Україна</p>
-                                            <p>{{ __('Пол') }}: Шлюха</p>
-                                            <p>{{ __('Возраст') }}: 18+</p>
-                                            <p>{{ __('Опыт роботы') }}: от 2 лет</p>
+                                            <h4 class="font-italic">{{ $vacancy->name_vacancy }}</h4>
+                                            <p>{{ __('Зарплата') }}: USD = {{ $vacancy->payment }}</p>
+                                            <p>{{ __('Страна') }}: {{ $vacancy->company->country->name }}</p>
+                                            <p>{{ __('Пол') }}: {{ ($vacancy->sex) ?: '-' }}</p>
+                                            <p>{{ __('Возраст') }}: {{ ($vacancy->age) ?: '-' }}</p>
+                                            <p>{{ __('Опыт роботы') }}: {{ ($vacancy->experience) ?: '-' }}</p>
                                         </div>
                                     </div>
                                     <div class="row" style="padding: 10px">
                                         <table class="table table-striped table-responsive text-justify">
                                             <tbody>
                                             <tr>
-                                                <td style="min-width: 130px">Обязаности</td>
+                                                <td style="min-width: 130px">{{ __('Обязаности') }}</td>
                                                 <td class="hot">
-                                                    123123121
+                                                    {{ $vacancy->responsibility }}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Условия проживания</td>
-                                                <td>Где найшла там и осталася)))
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem, eum magni nemo qui reiciendis vero. Assumenda cum et illum impedit iste laborum nam nesciunt non, officiis provident recusandae, ullam!</td>
+                                                <td>{{ __('Условия проживания') }}</td>
+                                                <td>
+                                                    {{ $vacancy->conditions }}
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Рабочий график</td>
-                                                <td>all day, all night</td>
+                                                <td>{{ __('Рабочий график') }}</td>
+                                                <td>{{ $vacancy->work_schedule }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Зарплата</td>
-                                                <td>Ну як вже буде) </td>
+                                                <td>{{ $vacancy->payment }}</td>
                                             </tr>
                                             <tr>
-                                                <td>Краткое описание</td>
-                                                <td>Говно вакансія) всім рекомендую</td>
+                                                <td>{{ __('Краткое описание') }}</td>
+                                                <td>{{ $vacancy->description }}</td>
                                             </tr>
                                             </tbody>
-                                            <b>Обязанности</b> В рабочие обязанности входит упаковка упаковок со станками в коробки; контроль качества произведенной продукции
-                                            <b>Рабочие условия</b> Медицинское обследование: 80 злотых – расход работника (анализы не берут, проверка зрения, давления)
-                                            <b>Условия трудоустройства</b> Трудоустройство возможно по рабочей визе (остаток по визе от 3-х месяцев) и биометрическому паспорту
-                                            <b>Условия проживания</b> Жилье предоставляет работодатель (работник оплачивает комм.услуги – 200 з./мес.)
-                                            <b>Рабочий график</b> 8-12 ч./день, 6 дней в неделю (одна неделя ночная, одна – дневная). 200-240 часов/день. 200-240 часов в месяц
-                                            <b>Зарплата</b> 11,7 зл./час (если работник моложе 25 лет); 10,07 зл./час (если работник старше 25 лет)
                                         </table>
                                     </div>
-                                    <a href="" class="btn btn-info">{{ __('Отправить резюме') }}</a>
+                                    <a href="{{ route('add-resume') }}?vacancy_id={{ $vacancy->id }}" class="btn btn-info">{{ __('Отправить резюме') }}</a>
                                 </aside>
                                 <aside class="col-md-4 blog-sidebar">
 
@@ -77,6 +72,7 @@
                                         <h4 class="font-italic">{{ __('Спроси нас о вакансии') }}: </h4>
                                         <form class="write-to-us question-vacancy" method="POST">
                                             {{ csrf_field() }}
+                                            <input type="hidden" value="{{ $vacancy->id }}">
                                             <div class="mb-6">
                                                 <label for="name">{{ __('Ваше имя') }}</label>
                                                 <div class="form-group">

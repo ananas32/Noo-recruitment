@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('body')
-
 @section('meta_title', $page->meta_title)
 @section('meta_description', $page->meta_description)
 @section('meta_keywords', $page->meta_keywords)
+
+@section('body')
 
 <div class="container">
     <div class="row">
@@ -25,50 +25,39 @@
                         <li>Чтоб устроиться на работу,достаточно иметь действующий  загранпаспорт и желание работать.</li>
                     </ol>
                 </div>
-                <div class="info">
-                    <br>
-                        <h3>ГОРЯЩИЕ ВАКАНСИИ</h3>
-                    <div class="row">
-                        <div class="col-md-3 mb-6">
-                            <div>
-                                <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2018/02/rabotnik-na-komplektatsiyu-avtomobilnyh-rulej-250x150.jpg" alt="">
-                            </div>
-                            <h4 class="text-center"><a href="">Название вакансии</a></h4>
-                        </div>
-                        <div class="col-md-3 mb-6">
-                            <div>
-                                <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2018/02/rabotnik-na-komplektatsiyu-avtomobilnyh-rulej-250x150.jpg" alt="">
-                            </div>
-                            <h4 class="text-center"><a href="">Название вакансии</a></h4>
-                        </div>
-                        <div class="col-md-3 mb-6">
-                            <div>
-                                <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2018/02/rabotnik-na-komplektatsiyu-avtomobilnyh-rulej-250x150.jpg" alt="">
-                            </div>
-                            <h4 class="text-center"><a href="">Название вакансии</a></h4>
-                        </div>
-                        <div class="col-md-3 mb-6">
-                            <div>
-                                <img class="img-responsive img-thumbnail" src="http://work-garant.com/wp-content/uploads/2018/02/rabotnik-na-komplektatsiyu-avtomobilnyh-rulej-250x150.jpg" alt="">
-                            </div>
-                            <h4 class="text-center"><a href="">Название вакансии</a></h4>
+                @if(count($hotVacancy))
+                    <div class="info">
+                        <br>
+                            <h3>{{ __('ГОРЯЩИЕ ВАКАНСИИ') }}</h3>
+                        <div class="row">
+                            @foreach($hotVacancy as $vacancy)
+                                <div class="col-md-3 mb-6">
+                                    <div>
+                                        <a href="/work/{{ $vacancy->slug }}">
+                                            <img class="img-responsive img-thumbnail"
+                                                 src="{{ $vacancy->getCroppedPhoto('home', 'norm') }}" alt="">
+                                        </a>
+                                    </div>
+                                    <h4 class="text-center"><a href="/work/{{ $vacancy->slug }}">{{ $vacancy->name_vacancy }}</a></h4>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
+                @endif
 
                 <div class="info">
                     <br>
-                    <h3>РАБОТА ПО СТРАНАМ</h3>
+                    <h3>{{ __('РАБОТА ПО СТРАНАМ') }}</h3>
                     <div class="row">
                         @if(count($countries))
                             @foreach($countries as $country)
                                 <div class="col-md-3">
                                     <div>
-                                        <a href="{{ url('/work') }}/{{ $country->slug }}">
+                                        <a href="{{ url('/work') }}/?country={{ $country->id }}">
                                             <img class="img-responsive img-thumbnail" src="{{ $country->getCroppedPhoto('avatar', 'norm') }}" alt="{{ $country->name }}">
                                         </a>
                                     </div>
-                                    <h4 class="text-center"><a href="http://work-garant.com/rabota/polsha/">Работа в Польше</a></h4>
+                                    <h4 class="text-center"><a href="/work/?country={{ $country->id }}">{{ $country->name }}</a></h4>
                                 </div>
                             @endforeach
                         @endif

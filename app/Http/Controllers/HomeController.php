@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Page;
 use App\Country;
+use App\Vacancy;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,9 +17,9 @@ class HomeController extends Controller
     public function index()
     {
         $page = Page::where('slug', 'home')->firstOrFail();
+        $hotVacancy = Vacancy::where('status_id', 1)->orderBy('id', 'DESC')->take(4)->get();
         $countries = Country::get();
-
-
-        return view('pages.home', compact('page', 'countries'));
+        
+        return view('pages.home', compact('page', 'countries', 'hotVacancy'));
     }
 }

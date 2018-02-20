@@ -13,7 +13,8 @@ class PageController extends Controller
 {
     public function work($slug)
     {
-        return view('pages.work-slug');
+        $vacancy = Vacancy::where('slug', $slug)->firstOrFail();
+        return view('pages.work-slug', compact('vacancy'));
     }
 
     public function workList(Request $request, $currentPage = 1)

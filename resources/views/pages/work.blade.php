@@ -76,20 +76,20 @@
                         @foreach($vacancies as $vacancy)
                             <div class="row" style="background: #fff; padding: 1%; border: solid 1px #B3B3B3;">
                                 <div class="col-xs-12 col-xsm-3 col-sm-3 text-center">
-                                    <a href="/work/">
+                                    <a href="/work/{{ $vacancy->slug }}">
                                         <img class="img-responsive img-thumbnail" style="max-height: 110px;" src="{{ $vacancy->getCroppedPhoto('home', 'norm') }}" alt="">
                                     </a>
                                 </div>
                                 <div class="col-xs-12 col-xsm-5 col-sm-5 text-justify border-line">
                                     <p class="text-uppercase text-center">
-                                        {{ $vacancy->name_vacancy }}
+                                        <a href="/work/{{ $vacancy->slug }}">{{ $vacancy->name_vacancy }}</a>
                                     </p>
                                     <table class="table table-striped text-center">
                                         <tbody>
                                         <tr>
                                             <td>{{ __('Статус') }}</td>
                                             <td class="hot">
-                                                Горящая
+                                                {{ $vacancy->status->name }}
                                             </td>
                                         </tr>
                                         <tr>
@@ -121,11 +121,6 @@
                             </div>
                         @endforeach
                     @endif
-
-                            {{--@if(!$loop->last)--}}
-                                {{--<hr>--}}
-                            {{--@endif--}}
-                        {{--@endforeach--}}
                 </div>
             </div>
         </div>

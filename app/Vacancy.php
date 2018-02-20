@@ -12,7 +12,14 @@ class Vacancy extends Model
     use CroppedPhotos;
 
     public $timestamps = false;
-    protected $translatable = ['name_vacancy', 'description', 'experience'];
+    protected $translatable = [
+        'name_vacancy',
+        'description',
+        'experience',
+        'conditions',
+        'responsibility',
+        'work_schedule'
+    ];
     protected $fillable = ['image', 'sex', 'age', 'payment', 'admin_active', 'vacancy_active'];
     protected $with = ['translations'];
 
@@ -29,6 +36,11 @@ class Vacancy extends Model
     public function company()
     {
         return $this->fieldId();
+    }
+
+    public function status()
+    {
+        return $this->statusId();
     }
 
 }

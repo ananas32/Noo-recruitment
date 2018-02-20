@@ -1,14 +1,14 @@
+@php $get = ($_SERVER["QUERY_STRING"]) ? '?'.$_SERVER["QUERY_STRING"] : '' @endphp
 @if ($paginator->hasPages())
     <ul class="pagination">
         {{-- Previous Page Link --}}
         @if (!$paginator->onFirstPage())
             <li class="pagination-prev">
-                <a class="" href="{{ rewrite_page_url($paginator->previousPageUrl()) }}">
+                <a class="" href="{{ rewrite_page_url($paginator->previousPageUrl()).$get }}">
                     <span>Previous</span>
                 </a>
             </li>
         @endif
-
         {{-- Pagination Elements --}}
         @foreach ($elements as $element)
             {{-- "Three Dots" Separator --}}
@@ -25,7 +25,7 @@
                         </li>
                     @elseif ($page == 1)
                         <li>
-                            <a href="{{ rewrite_page_url($url) }}">
+                            <a href="{{ rewrite_page_url($url).$get }}">
                                 <span>{{ $page }}</span>
                             </a>
                         </li>
@@ -35,7 +35,7 @@
                         </li>
                     @else
                         <li>
-                            <a href="{{ rewrite_page_url($url) }}">
+                            <a href="{{ rewrite_page_url($url).$get }}">
                                 <span>{{ $page }}</span>
                             </a>
                         </li>
@@ -43,11 +43,10 @@
                 @endforeach
             @endif
         @endforeach
-
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
             <li class="pagination-next">
-                <a href="{{ rewrite_page_url($paginator->nextPageUrl()) }}">
+                <a href="{{ rewrite_page_url($paginator->nextPageUrl().$get) }}">
                     <span>Next</span>
                 </a>
             </li>

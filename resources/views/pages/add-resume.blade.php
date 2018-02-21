@@ -23,24 +23,32 @@
                                 </button>
                                 <strong>{{ __('Ура') }}!</strong> {{ __('Форма успешно отправлена') }}
                             </div>
-
-                            <div class="alert alert-danger fade in alert-dismissable" id="danger-send" style="display: none">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
-                                <strong>{{ __('Внимание') }}!</strong> {{ __('Не все поля заполнены коректно') }}.
-                            </div>
-
-                            <form class="write-to-us register-form-vacancy">
+                            @if (Session::has('danger'))
+                                <div class="alert alert-danger fade in alert-dismissable" id="danger-send">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                                    <strong>{{ __('Внимание') }}!</strong> {{ __('Не все поля заполнены коректно') }}.
+                                </div>
+                            @endif
+                            <form class="write-to-us register-form-vacancy" method="POST" action="{{ url('/registration-resume') }}">
                                 {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="name">{{ __('Имя') }}</label>
-                                        <input type="text" class="form-control" name="name" id="name" required="">
-                                        <div class="red-text error"></div>
+                                        <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}" required="">
+                                        @if ($errors->has('name'))
+                                            <div class="red-text error">
+                                                <strong>{{ $errors->first('name') }}</strong>
+                                            </div>
+                                        @endif
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="surname">{{ __('Фамилия') }}</label>
-                                        <input type="text" class="form-control" name="surname" id="surname" required="">
-                                        <div class="red-text error"></div>
+                                        <input type="text" class="form-control" name="surname" id="surname" value="{{ old('surname') }}" required="">
+                                        @if ($errors->has('surname'))
+                                            <div class="red-text error">
+                                                <strong>{{ $errors->first('surname') }}</strong>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
 
@@ -48,13 +56,21 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="middle_name">{{ __('По-батькові') }}</label>
-                                        <input type="text" class="form-control" name="middle_name" id="middle_name" placeholder="" required="">
-                                        <div class="red-text error"></div>
+                                        <input type="text" class="form-control" name="middle_name" id="middle_name" value="{{ old('middle_name') }}" placeholder="" required="">
+                                        @if ($errors->has('middle_name'))
+                                            <div class="red-text error">
+                                                <strong>{{ $errors->first('middle_name') }}</strong>
+                                            </div>
+                                        @endif
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="age">{{ __('Года') }}:</label>
-                                        <input type="text" class="form-control" name="age" id="age" placeholder="" required="">
-                                        <div class="red-text error"></div>
+                                        <input type="text" class="form-control" name="age" id="age" value="{{ old('age') }}" placeholder="" required="">
+                                        @if ($errors->has('age'))
+                                            <div class="red-text error">
+                                                <strong>{{ $errors->first('age') }}</strong>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
 
@@ -62,14 +78,18 @@
                                     <div class="col-md-6 mb-3">
                                         <div class="mb-3">
                                             <label for="email">Email</label>
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
-                                            <div class="red-text error"></div>
+                                            <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" placeholder="you@example.com">
+                                            @if ($errors->has('email'))
+                                                <div class="red-text error">
+                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                </div>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <div class="mb-3">
                                             <label for="drive_license">Водительские права (A,B,C,D) укажите через кому</label>
-                                            <input type="text" class="form-control" name="drive_license" id="drive_license" required="">
+                                            <input type="text" class="form-control" name="drive_license" id="drive_license" value="{{ old('drive_license') }}">
                                             <div class="red-text error"></div>
                                         </div>
                                     </div>
@@ -79,13 +99,13 @@
                                     <div class="col-md-6 mb-3">
                                         <div class="form-group">
                                             <label for="message">{{ __('Уровень образования') }}</label>
-                                            <textarea class="form-control" id="exampleInputText" rows="4" placeholder="Your question or comment" required="required" name="message" cols="50"></textarea>
+                                            <textarea class="form-control" rows="4" name="level_education" cols="50">{{ old('level_education') }}</textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <div class="form-group">
                                             <label for="message">{{ __('Спецыальность (квалификация)') }}</label>
-                                            <textarea class="form-control" id="exampleInputText" rows="4" placeholder="Your question or comment" required="required" name="message" cols="50"></textarea>
+                                            <textarea class="form-control" rows="4" name="qualification" cols="50">{{ old('qualification') }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +114,7 @@
                                     <div class="col-md-6 mb-3">
                                         <div class="form-group">
                                             <label for="message">{{ __('Cтаж или опыт работы') }}</label>
-                                            <textarea class="form-control" id="exampleInputText" rows="4" placeholder="Your question or comment" required="required" name="message" cols="50"></textarea>
+                                            <textarea class="form-control" rows="4" name="experience" cols="50">{{ old('experience') }}</textarea>
                                         </div>
                                     </div>
 
@@ -102,7 +122,7 @@
 
                                 <hr class="mb-4">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="same-address">
+                                    <input type="checkbox" class="custom-control-input" name="driver_loader" value="{{ (old('driver_loader')== 1) ? 1 : '' }}">
                                     <label class="custom-control-label" for="same-address">{{ __('Водительские права на погрузчик') }}</label>
                                 </div>
                                 <hr class="mb-4">
@@ -113,31 +133,31 @@
 
                                         <div>
                                             {{ __('Английский') }}:
-                                            <label class="checkbox-inline"><input name="english" type="radio" value="">{{ __('Начальный') }}</label>
-                                            <label class="checkbox-inline"><input name="english" type="radio" value="">{{ __('Средний') }}</label>
-                                            <label class="checkbox-inline"><input name="english" type="radio" value="">{{ __('Высший') }}</label>
-                                            <label class="checkbox-inline"><input name="english" type="radio" value="">{{ __('Переговорный') }}</label>
+                                            <label class="checkbox-inline"><input name="english" type="radio" value="1">{{ __('Начальный') }}</label>
+                                            <label class="checkbox-inline"><input name="english" type="radio" value="2">{{ __('Средний') }}</label>
+                                            <label class="checkbox-inline"><input name="english" type="radio" value="3">{{ __('Высший') }}</label>
+                                            <label class="checkbox-inline"><input name="english" type="radio" value="4">{{ __('Переговорный') }}</label>
                                         </div>
                                         <div>
                                             {{ __('Немецкий') }}:
-                                            <label class="checkbox-inline"><input name="de" type="radio" value="">{{ __('Начальный') }}</label>
-                                            <label class="checkbox-inline"><input name="de" type="radio" value="">{{ __('Средний') }}</label>
-                                            <label class="checkbox-inline"><input name="de" type="radio" value="">{{ __('Высший') }}</label>
-                                            <label class="checkbox-inline"><input name="de" type="radio" value="">{{ __('Переговорный') }}</label>
+                                            <label class="checkbox-inline"><input name="de" type="radio" value="1">{{ __('Начальный') }}</label>
+                                            <label class="checkbox-inline"><input name="de" type="radio" value="2">{{ __('Средний') }}</label>
+                                            <label class="checkbox-inline"><input name="de" type="radio" value="3">{{ __('Высший') }}</label>
+                                            <label class="checkbox-inline"><input name="de" type="radio" value="4">{{ __('Переговорный') }}</label>
                                         </div>
                                         <div>
                                             {{ __('Венгерский') }}:
-                                            <label class="checkbox-inline"><input name="ve" type="radio" value="">{{ __('Начальный') }}</label>
-                                            <label class="checkbox-inline"><input name="ve" type="radio" value="">{{ __('Средний') }}</label>
-                                            <label class="checkbox-inline"><input name="ve" type="radio" value="">{{ __('Высший') }}</label>
-                                            <label class="checkbox-inline"><input name="ve" type="radio" value="">{{ __('Переговорный') }}</label>
+                                            <label class="checkbox-inline"><input name="ve" type="radio" value="1">{{ __('Начальный') }}</label>
+                                            <label class="checkbox-inline"><input name="ve" type="radio" value="2">{{ __('Средний') }}</label>
+                                            <label class="checkbox-inline"><input name="ve" type="radio" value="3">{{ __('Высший') }}</label>
+                                            <label class="checkbox-inline"><input name="ve" type="radio" value="4">{{ __('Переговорный') }}</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 mb-3">
                                         <div class="form-group">
                                             <label for="message">{{ __('Другие языки') }}</label>
-                                            <textarea class="form-control" id="exampleInputText" rows="4" placeholder="Your question or comment" required="required" name="message" cols="50"></textarea>
+                                            <textarea class="form-control" rows="4" name="other_languages" cols="50">{{ old('other_languages') }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +181,7 @@
                                     <div class="col-md-6 mb-3">
                                         <div class="mb-3">
                                             <label for="address">{{ __('Желаемый уровень ЗП в') }} $</label>
-                                            <input type="text" class="form-control" id="address" placeholder="Все деньги" required="">
+                                            <input type="text" class="form-control" name="money" placeholder="Все деньги" value="{{ old('money') }}" required="">
                                         </div>
                                     </div>
                                 </div>

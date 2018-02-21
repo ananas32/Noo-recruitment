@@ -19,6 +19,12 @@ class RegistrationVacancyController extends Controller
                 'email' => 'required|email|max:255|min:4'
 			)
 		);
+		dd($request->all());
+        if ($validator->fails())
+        {
+            return redirect()->back()->withInput()->withErrors($validator->errors())->with('danger', 'err');
+        }
+        //return Redirect::to('/login')->with('info', 'On your email was send email to confirm your account.');
 		if ($validator->fails()) {
 			return response()->json([
 				'response' => $validator->messages()

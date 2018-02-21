@@ -5,12 +5,12 @@ $.ajaxSetup({
  * Send ajax form registration user
  */
 $( document ).ready(function() {
-    $(".send-register-form-vacancy").click(
-        function(){
-            sendFrom('register-form-vacancy', '/registration-resume', '', 'success-send', 'danger-send');
-            return false;
-        }
-    );
+    // $(".send-register-form-vacancy").click(
+    //     function(){
+    //         sendFrom('register-form-vacancy', '/registration-resume', '', 'success-send', 'danger-send');
+    //         return false;
+    //     }
+    // );
 
     $(".send-question-form-vacancy").click(
         function(){
@@ -52,14 +52,8 @@ function sendFrom(form_class, url, prefix, successAlertId, dangerAlertId) {
                 $("#" + dangerAlertId).css({'display': 'block'});
             } else {
                 $("#" + dangerAlertId).css({'display': 'none'});
-                $("#" + successAlertId).css({'display': 'block'});
-                if (successAlertId === 'account-alert') {
-                    var login = $("input[name='login']").val();
-                    var server = $("input[name='server']").val();
-                    addAccount(login, server);
-                }
-                jQuery("#" + form_class)[0].reset();
-                deleteErrorResponse($("#" + form_class));
+                // $("#" + successAlertId).css({'display': 'block'});
+
             }
         },
         error: function (response) {

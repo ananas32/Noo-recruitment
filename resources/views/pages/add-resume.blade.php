@@ -97,12 +97,7 @@
                                             <textarea class="form-control" id="exampleInputText" rows="4" placeholder="Your question or comment" required="required" name="message" cols="50"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="message">{{ __('Какой график работы вам удобный') }}?</label>
-                                            <textarea class="form-control" id="exampleInputText" rows="4" placeholder="Your question or comment" required="required" name="message" cols="50"></textarea>
-                                        </div>
-                                    </div>
+
                                 </div>
 
                                 <hr class="mb-4">

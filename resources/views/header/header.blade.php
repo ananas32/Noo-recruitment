@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 text-center">
-                <p style="padding-top: 2%">067 436 87 46</p>
+                <p style="padding-top: 2%">+38095 113 12 14</p>
                 <p>+380 66 267 35 28</p>
             </div>
             <div class="hidden-xs hidden-xsm hidden-sm col-md-4">

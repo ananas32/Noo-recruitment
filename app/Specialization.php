@@ -14,4 +14,9 @@ class Specialization extends Model
     protected $fillable = ['active'];
     protected $with = ['translations'];
 
+    public function vacancy()
+    {
+        return $this->hasMany(Vacancy::class, 'specialization_id', 'id');
+    }
+
 }

@@ -33,6 +33,11 @@ class Vacancy extends Model
         return $this->belongsTo(Company::class, 'field_id', 'id');
     }
 
+    public function specializationId()
+    {
+        return $this->belongsTo(Specialization::class, 'specialization_id', 'id');
+    }
+
     public function company()
     {
         return $this->fieldId();

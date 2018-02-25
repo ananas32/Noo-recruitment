@@ -20,8 +20,8 @@ class HomeController extends Controller
         $page = Page::where('slug', 'home')->firstOrFail();
         $hotVacancy = Vacancy::where('status_id', 1)->orderBy('id', 'DESC')->take(4)->get();
         $countries = Country::get();
-        $specialisation = Specialization::get();
+        $specialisations = Specialization::get();
 
-        return view('pages.home', compact('page', 'countries', 'hotVacancy', 'specialisation'));
+        return view('pages.home', compact('page', 'countries', 'hotVacancy', 'specialisations'));
     }
 }

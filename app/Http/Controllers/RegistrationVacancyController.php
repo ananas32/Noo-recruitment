@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use App\VacancyQuestion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -50,8 +51,15 @@ class RegistrationVacancyController extends Controller
                 'response' => $validator->messages()
             ]);
         } else {
+            $vacancyQuestion = new VacancyQuestion;
+            $vacancyQuestion->vacancy_id = $request->vacancy_id;
+            $vacancyQuestion->name = $request->name;
+            $vacancyQuestion->contact = $request->contact;
+            $vacancyQuestion->text = $request->question;
+            $vacancyQuestion->save();
+
             return response()->json([
-                'response' => 'Всьо є дуже файно'
+                'response' => 'success'
             ]);
         }
     }

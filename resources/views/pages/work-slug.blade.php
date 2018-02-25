@@ -63,7 +63,7 @@
                                 <aside class="col-md-4 blog-sidebar">
 
                                     <div class="p-3">
-                                        <div class="alert alert-success fade in alert-dismissable" id="success-send" style="margin-top:18px; display: block">
+                                        <div class="alert alert-success fade in alert-dismissable" id="success-send" style="margin-top:18px; display: none">
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                 <span aria-hidden="true" style="font-size:20px">×</span>
                                             </button>
@@ -72,7 +72,7 @@
                                         <h4 class="font-italic">{{ __('Спроси нас о вакансии') }}: </h4>
                                         <form class="write-to-us question-vacancy" method="POST">
                                             {{ csrf_field() }}
-                                            <input type="hidden" value="{{ $vacancy->id }}">
+                                            <input type="hidden" name="vacancy_id" value="{{ $vacancy->id }}">
                                             <div class="mb-6">
                                                 <label for="name">{{ __('Ваше имя') }}</label>
                                                 <div class="form-group">

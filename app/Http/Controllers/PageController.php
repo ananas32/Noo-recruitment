@@ -50,7 +50,7 @@ class PageController extends Controller
         $vacancies = $query
             ->select('vacancies.*')
             ->orderBy('vacancies.id', 'DESC')
-            ->paginate(2);
+            ->paginate(20);
 
         $vacancies->setPath('/work/page/');
 
@@ -60,7 +60,7 @@ class PageController extends Controller
             'countries' => $countries,
             'specializations' => $specializations
         ];
-//        dd($formParam);
+
         $data = array_merge($data, $formParam);
 
         return view('pages.work', $data);

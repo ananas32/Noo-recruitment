@@ -53,7 +53,7 @@ function sendFrom(form_class, url, prefix, successAlertId, dangerAlertId) {
             } else {
                 $("#" + dangerAlertId).css({'display': 'none'});
                 $("#" + successAlertId).css({'display': 'block'});
-
+                $('.' + form_class)[0].reset();
             }
         },
         error: function (response) {

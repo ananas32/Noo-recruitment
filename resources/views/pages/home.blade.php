@@ -56,194 +56,28 @@
                     <br>
                     <h3>Каталог вакансий</h3>
                     <div class="list">
-                        <div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        @if(count($specialisations))
+                            @foreach($specialisations as $specialisation)
+                                <div class="item">
+                                    <h4 class="vacancy-category-title">
+                                        <a href="work?specialization={{ $specialisation->id }}">{{ $specialisation->name }}</a>
+                                    </h4>
+                                    <div class="vacancy-category">
+                                        <ul>
+                                            @if(count($specialisation->vacancy))
+                                                @foreach($specialisation->vacancy as $vacancy)
+                                                    <li><a href="/work/{{ $vacancy->slug }}">{{ $vacancy->name_vacancy }}</a></li>
+                                                @endforeach
+                                            @endif
+                                        </ul>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-блок в якому будуть країни
-
-Далі блок з гарячим вакансіями до 8 штук
-
-Список спеціалізацій і вакансій
-
 @stop

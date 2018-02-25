@@ -147,7 +147,7 @@ class Article extends Model
 
     public function scopeActiveList($query)
     {
-        return $query->active()->published();
+        return $query->active();
     }
 
     public function scopeBySlugs($query, $id, $slug)

@@ -40,8 +40,8 @@
                                         </a>
                                     </p>
                                     <p>
-                                        <time datetime="{{ $item->created_at->format('Y-m-d H:i') }}" style="margin-right: 10px">
-                                            {{ $item->created_at->format('Y-m-d H:i') }}
+                                        <time datetime="{{ $item->published_at }}" style="margin-right: 10px">
+                                            {{ $item->published_at }}
                                         </time>
                                     </p>
                                     {{ $item->incision }}

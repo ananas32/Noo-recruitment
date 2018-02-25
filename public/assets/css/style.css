@@ -738,3 +738,25 @@ body .developers a:hover {
 .vacancy-category ul{
     padding-left:10px;
 }
+.list {
+    display: flex;
+}
+.item {
+    width: 25%;
+    padding: 5px;
+}
+@media screen and (max-width: 750px) {
+    .item {
+        width: 33.33%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .item {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 390px) {
+    .item {
+        width: 100%;
+    }
+}

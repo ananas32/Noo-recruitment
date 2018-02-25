@@ -55,8 +55,8 @@
                 <div class="info">
                     <br>
                     <h3>Каталог вакансий</h3>
-                    <div class="row">
-                        <div class="col-md-3">
+                    <div class="list">
+                        <div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>
@@ -79,7 +79,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>
@@ -101,7 +101,7 @@
                                     <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
                                 </ul>
                             </div>
-                        </div><div class="col-md-3">
+                        </div><div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>
@@ -110,29 +110,7 @@
                                     <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
                                 </ul>
                             </div>
-                        </div><div class="col-md-3">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="col-md-3">
+                        </div><div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>
@@ -154,22 +132,7 @@
                                     <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
                                 </ul>
                             </div>
-                        </div><div class="col-md-3">
-                            <h4 class="vacancy-category-title">
-                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
-                            </h4>
-                            <div class="vacancy-category">
-                                <ul>
-                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
-                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
-                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
-                                </ul>
-                            </div>
-                        </div><div class="col-md-3">
+                        </div><div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>
@@ -191,7 +154,44 @@
                                     <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
                                 </ul>
                             </div>
-                        </div><div class="col-md-3">
+                        </div><div class="item">
+                            <h4 class="vacancy-category-title">
+                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
+                            </h4>
+                            <div class="vacancy-category">
+                                <ul>
+                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
+                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
+                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
+                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
+                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
+                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
+                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
+                                </ul>
+                            </div>
+                        </div><div class="item">
+                            <h4 class="vacancy-category-title">
+                                <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
+                            </h4>
+                            <div class="vacancy-category">
+                                <ul>
+                                    <li><a href="http://work-garant.com/avtoslesar/">Автослесарь</a></li>
+                                    <li><a href="http://work-garant.com/rabota-na-rihtovochnom-stende-vyravnivanie-geometrii-kuzova/">Работа на рихтовочном стенде (выравнивание геометрии кузова)</a></li>
+                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
+                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
+                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
+                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
+                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
+                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
+                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
+                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
+                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
+                                    <li><a href="http://work-garant.com/shinomontazhnik/">Шиномонтажник</a></li>
+                                    <li><a href="http://work-garant.com/mojshhiki-na-avtomojku/">Мойщики на автомойку</a></li>
+                                    <li><a href="http://work-garant.com/avtomalyar/">Автомаляр</a></li>
+                                </ul>
+                            </div>
+                        </div><div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>
@@ -206,7 +206,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>
@@ -220,7 +220,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="item">
                             <h4 class="vacancy-category-title">
                                 <a href="http://work-garant.com/category/vse-vakansii/cto/">CTO</a>
                             </h4>

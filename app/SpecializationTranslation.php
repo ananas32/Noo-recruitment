@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class StatusTranslation extends Model
+class SpecializationTranslation extends Model
 {
     public $timestamps = false;
     protected $fillable = ['name'];

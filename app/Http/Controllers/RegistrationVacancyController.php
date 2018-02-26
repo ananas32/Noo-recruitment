@@ -20,7 +20,9 @@ class RegistrationVacancyController extends Controller
                 'email' => 'required|email|max:255|min:4'
 			)
 		);
-		dd($request->all());
+
+        $path = $request->file('resume_file')->store('resumes');
+        dd($path);
         if ($validator->fails())
         {
             return redirect()->back()->withInput()->withErrors($validator->errors())->with('danger', 'err');

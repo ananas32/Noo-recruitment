@@ -21,7 +21,7 @@ class RegistrationVacancyController extends Controller
 			)
 		);
 
-        $path = $request->file('resume_file')->store('resumes');
+        $path = $request->file('resume_file')->store('public/resumes');
         dd($path);
         if ($validator->fails())
         {

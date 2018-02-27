@@ -23,7 +23,8 @@ class Resume extends Model
 		"de",
 		"ve",
 		"other_languages",
-		"money"
+		"money", 
+		"file"
 	];
 
 }

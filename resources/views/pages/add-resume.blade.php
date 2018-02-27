@@ -17,12 +17,14 @@
                     <div class="info">
                         <div>
                             <h4 class="mb-3 text-center"><b>{{ __('Ваше резюме') }}</b></h4>
-                            <div class="alert alert-success fade in alert-dismissable" id="success-send" style="margin-top:18px; display: none">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true" style="font-size:20px">×</span>
-                                </button>
-                                <strong>{{ __('Ура') }}!</strong> {{ __('Форма успешно отправлена') }}
-                            </div>
+                            @if (Session::has('success'))
+                                <div class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true" style="font-size:20px">×</span>
+                                    </button>
+                                    {{ __('Ваше резюме успешно отправлено') }}
+                                </div>
+                            @endif
                             @if (Session::has('danger'))
                                 <div class="alert alert-danger fade in alert-dismissable" id="danger-send">
                                     <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
@@ -31,6 +33,7 @@
                             @endif
                             <form class="write-to-us register-form-vacancy" method="POST" action="{{ url('/registration-resume') }}">
                                 {{ csrf_field() }}
+                                <input type="hidden" name="work_id" value="{{ (isset($vacancy_id) ? $vacancy_id : 0) }}">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="name">{{ __('Имя') }}</label>

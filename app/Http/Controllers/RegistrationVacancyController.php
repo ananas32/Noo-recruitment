@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use App\Resume;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -11,7 +12,7 @@ class RegistrationVacancyController extends Controller
 	public function registerVacancy(Request $request)
 	{
 		$validator = Validator::make($request->all(),
-			array(
+			array(git s
 				'name' => 'required|alpha|min:2|max:190',
 				'surname' => 'required|alpha|min:2|max:190',
                 'middle_name' => 'required|alpha|min:2|max:190',
@@ -19,20 +20,39 @@ class RegistrationVacancyController extends Controller
                 'email' => 'required|email|max:255|min:4'
 			)
 		);
-		dd($request->all());
-        if ($validator->fails())
-        {
+
+        if ($validator->fails()){
             return redirect()->back()->withInput()->withErrors($validator->errors())->with('danger', 'err');
-        }
-        //return Redirect::to('/login')->with('info', 'On your email was send email to confirm your account.');
-		if ($validator->fails()) {
-			return response()->json([
-				'response' => $validator->messages()
+        } else {
+			$folder = 'vacancies/';
+
+			if (!Storage::disk('public')->exists($folder)) {
+				Storage::disk('public')->makeDirectory($folder);
+			}
+
+			$path = $folder;
+			$avatarName = $ProviderUser->name.'_'.$ProviderUser->id.'.jpg';
+			$path.=$avatarName;
+			File::make($pathImage)->save(Storage::disk('public')->path($path));
+			[{"download_link":"companies\/February2018\/vaH5LMIIzOygY0F9kp1l.sql","original_name":"Dump20180221.sql"}]
+			Resume::create([
+				'work_id' => $request->work_id,
+				"name" => $request->name,
+				"surname" => $request->surname,
+				"middle_name" => $request->middle_name,
+				"age" => $request->age,
+				"email" => $request->email,
+				"drive_license" => $request->drive_license,
+				"level_education" => $request->level_education,
+				"qualification" => $request->qualification,
+				"experience" => $request->experience,
+				"en" => $request->en,
+				"de" => $request->de,
+				"ve" => $request->ve,
+				"other_languages" => $request->other_language,
+				"money" => $request->money
 			]);
-		} else {
-			return response()->json([
-				'response' => 'zbs'
-			]);
+			return redirect()->back()->with('success', 'success');
 		}
 	}
 
@@ -75,9 +95,16 @@ class RegistrationVacancyController extends Controller
 		}
 	}
 
-	public function addResume ()
+	public function addResume (Request $request)
 	{
+		$param = $request->all();
 		$page = Page::where('slug', 'add-resume')->firstOrFail();
-		return view('pages.add-resume', compact('page'));
+		$data = [
+			'page' => $page
+		];
+
+		$data = array_merge($data, $param);
+
+		return view('pages.add-resume', $data);
 	}
 }

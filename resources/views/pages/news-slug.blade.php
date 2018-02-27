@@ -16,8 +16,8 @@
                                 <strong class="left-line">{{ $news->title }}</strong>
                             </div>
                             <p>
-                                <time datetime="{{ $news->created_at->format('Y-m-d H:i') }}" style="margin-right: 10px">
-                                    {{ $news->created_at->format('Y-m-d H:i') }}
+                                <time datetime="{{ $news->published_at }}" style="margin-right: 10px">
+                                    {{ $news->published_at }}
                                 </time>
                                 Переглядів: <b>{{ $news->views }}</b>
                                 <span style="float: right"><a href="{{ url()->previous() }}" class="link-news">назад</a></span>

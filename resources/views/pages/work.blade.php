@@ -41,8 +41,15 @@
                                         <div class="form-group">
                                             <select name="specialization" class="form-control" id="sel1">
                                                 <option value="0">{{ __('Все специализации') }}</option>
-                                                <option value="1">Шлюха</option>
-                                                <option value="2">Підр</option>
+                                                @if(count($specializations))
+                                                    @foreach($specializations as $item)
+                                                        @if(isset($specialization) && $item->id == $specialization)
+                                                            <option selected="selected" value="{{ $item->id }}">{{ $item->name }}</option>
+                                                        @else
+                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                        @endif
+                                                    @endforeach
+                                                @endif
                                             </select>
                                         </div>
                                     </div>
@@ -113,10 +120,10 @@
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-xsm-2 col-sm-2 text-justify border-line">
-                                    <p class="text-center">PLN = 2 600 - 3 100</p>
-                                    <p class="text-center green-text">UAH ≈ 22 100 - 26 350</p>
+                                    {{--<p class="text-center">PLN = 2 600 - 3 100</p>--}}
+                                    {{--<p class="text-center green-text">UAH ≈ 22 100 - 26 350</p>--}}
                                     <p class="text-center">USD ≈ {{ $vacancy->payment }}</p>
-                                    <p class="text-center">EUR ≈ 708 - 845</p>
+                                    {{--<p class="text-center">EUR ≈ 708 - 845</p>--}}
                                 </div>
                             </div>
                         @endforeach

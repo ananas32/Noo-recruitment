@@ -52,8 +52,8 @@ function sendFrom(form_class, url, prefix, successAlertId, dangerAlertId) {
                 $("#" + dangerAlertId).css({'display': 'block'});
             } else {
                 $("#" + dangerAlertId).css({'display': 'none'});
-                // $("#" + successAlertId).css({'display': 'block'});
-
+                $("#" + successAlertId).css({'display': 'block'});
+                $('.' + form_class)[0].reset();
             }
         },
         error: function (response) {

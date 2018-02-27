@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="logo">
-                    <a href="/"><img src="{{ asset('assets/img/logo.png') }}" alt=""></a>
+{{--                    <a href="/"><img src="{{ asset('assets/img/logo.png') }}" alt=""></a>--}}
                     <a href="/" class="title">
                         <h1>AntHill Hungary</h1>
-                        <h2>{{ trans('header.system_search') }}</h2>
+{{--                        <h2>{{ trans('header.system_search') }}</h2>--}}
                     </a>
                     <div class="menu-bars">
                         <a href="#" onclick="showHide('main-nav', 'menu-bars')">
@@ -30,13 +30,15 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 text-center">
-                <p style="padding-top: 2%">+38095 113 12 14</p>
+                <p style="padding-top: 2%">+380 95 113 12 14</p>
                 <p>+380 66 267 35 28</p>
+                <p>work.aleh@gmail.com</p>
+                {{--Hungary,9094 Tápszentmklós,Fő utca 38--}}
             </div>
             <div class="hidden-xs hidden-xsm hidden-sm col-md-4">
                 <div class="cite text-right" style="padding-top: 2%">
                     <div style="padding-bottom: 1%">
-                        <a class="btn btn-default header-button" href="{{ route('add-vacancy') }}">{{ __('Я роботодатєль') }}</a>
+                        {{--<a class="btn btn-default header-button" href="{{ route('add-vacancy') }}">{{ __('Я роботодатєль') }}</a>--}}
                         <a class="btn btn-danger header-button" href="{{ route('add-resume') }}">{{ __('Отправить резюме') }}</a>
                     </div>
 
@@ -81,7 +83,7 @@
 
                     <div>
                         <!-- Trigger the modal with a button -->
-                        <a class="btn btn-success header-button" data-toggle="modal" data-target="#myModal">{{ __('Обратный звонок') }}</a>
+                        {{--<a class="btn btn-success header-button" data-toggle="modal" data-target="#myModal">{{ __('Обратный звонок') }}</a>--}}
                     </div>
                 </div>
             </div>

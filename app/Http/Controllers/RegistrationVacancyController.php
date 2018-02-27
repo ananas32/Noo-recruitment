@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Page;
 use App\Resume;
+use App\VacancyQuestion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,7 +13,7 @@ class RegistrationVacancyController extends Controller
 	public function registerVacancy(Request $request)
 	{
 		$validator = Validator::make($request->all(),
-			array(git s
+			array(
 				'name' => 'required|alpha|min:2|max:190',
 				'surname' => 'required|alpha|min:2|max:190',
                 'middle_name' => 'required|alpha|min:2|max:190',
@@ -21,20 +22,14 @@ class RegistrationVacancyController extends Controller
 			)
 		);
 
-        if ($validator->fails()){
+        if ($validator->fails())
+        {
             return redirect()->back()->withInput()->withErrors($validator->errors())->with('danger', 'err');
         } else {
-			$folder = 'vacancies/';
 
-			if (!Storage::disk('public')->exists($folder)) {
-				Storage::disk('public')->makeDirectory($folder);
-			}
-
-			$path = $folder;
-			$avatarName = $ProviderUser->name.'_'.$ProviderUser->id.'.jpg';
-			$path.=$avatarName;
-			File::make($pathImage)->save(Storage::disk('public')->path($path));
-			[{"download_link":"companies\/February2018\/vaH5LMIIzOygY0F9kp1l.sql","original_name":"Dump20180221.sql"}]
+//			[{"download_link":"companies\/February2018\/vaH5LMIIzOygY0F9kp1l.sql","original_name":"Dump20180221.sql"}]
+			$path = $request->file('resume_file')->store('public/resumes');
+			dd($path, $request->file('resume_file'));
 			Resume::create([
 				'work_id' => $request->work_id,
 				"name" => $request->name,
@@ -70,8 +65,15 @@ class RegistrationVacancyController extends Controller
                 'response' => $validator->messages()
             ]);
         } else {
+            $vacancyQuestion = new VacancyQuestion;
+            $vacancyQuestion->vacancy_id = $request->vacancy_id;
+            $vacancyQuestion->name = $request->name;
+            $vacancyQuestion->contact = $request->contact;
+            $vacancyQuestion->text = $request->question;
+            $vacancyQuestion->save();
+
             return response()->json([
-                'response' => 'Всьо є дуже файно'
+                'response' => 'success'
             ]);
         }
     }

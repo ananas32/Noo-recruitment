@@ -31,7 +31,7 @@
                                     <strong>{{ __('Внимание') }}!</strong> {{ __('Не все поля заполнены коректно') }}.
                                 </div>
                             @endif
-                            <form class="write-to-us register-form-vacancy" method="POST" action="{{ url('/registration-resume') }}">
+                            <form class="write-to-us register-form-vacancy" method="POST" action="{{ url('/registration-resume') }}" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="work_id" value="{{ (isset($vacancy_id) ? $vacancy_id : 0) }}">
                                 <div class="row">
@@ -170,7 +170,7 @@
                                     <div class="col-md-6 mb-3">
                                         <div class="form-group">
                                             <label>{{ __('Загрузите вашие документы') }}</label>
-                                            <div class="input-group input-file" name="Fichier1">
+                                            <div class="input-group input-file" name="resume_file">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-default btn-choose" type="button">{{ __('Выберите') }}</button>
                                             </span>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Country;
 use App\Page;
+use App\Specialization;
 use App\Vacancy;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
@@ -22,6 +23,7 @@ class PageController extends Controller
         $formParam  = $request->all();
         $countries = Country::get();
         $page = Page::where('slug', 'work')->firstOrFail();
+        $specializations = Specialization::get();
 
         $query = Vacancy::join('companies', 'companies.id', '=', 'vacancies.field_id');
 
@@ -38,7 +40,7 @@ class PageController extends Controller
         }
 
         if($request->specialization) {
-
+            $query = $query->where('specialization_id', $request->specialization);
         }
 
         Paginator::currentPageResolver(function() use ($currentPage) {
@@ -48,16 +50,17 @@ class PageController extends Controller
         $vacancies = $query
             ->select('vacancies.*')
             ->orderBy('vacancies.id', 'DESC')
-            ->paginate(2);
+            ->paginate(20);
 
         $vacancies->setPath('/work/page/');
 
         $data = [
             'page' => $page,
             'vacancies' => $vacancies,
-            'countries' => $countries
+            'countries' => $countries,
+            'specializations' => $specializations
         ];
-//        dd($formParam);
+
         $data = array_merge($data, $formParam);
 
         return view('pages.work', $data);

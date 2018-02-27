@@ -7,11 +7,11 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/INBusiness/voyager.git"
+            "url": "git@github.com:INBusiness/voyager.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/INBusiness/laravel-filemanager.git"
+            "url": "git@github.com:INBusiness/laravel-filemanager.git"
         }
     ],
     "require": {

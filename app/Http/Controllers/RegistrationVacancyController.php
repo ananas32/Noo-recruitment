@@ -26,10 +26,15 @@ class RegistrationVacancyController extends Controller
         {
             return redirect()->back()->withInput()->withErrors($validator->errors())->with('danger', 'err');
         } else {
+			$file = $request->file('resume_file');
+			$path = str_replace("public/", "", $file->store('public/resumes'));
+			$originalName = $file->getClientOriginalName();
 
-//			[{"download_link":"companies\/February2018\/vaH5LMIIzOygY0F9kp1l.sql","original_name":"Dump20180221.sql"}]
-			$path = $request->file('resume_file')->store('public/resumes');
-			dd($path, $request->file('resume_file'));
+			$json = response()->json([
+				"download_link" => $path,
+				"original_name" => $originalName
+			]);
+
 			Resume::create([
 				'work_id' => $request->work_id,
 				"name" => $request->name,
@@ -45,8 +50,10 @@ class RegistrationVacancyController extends Controller
 				"de" => $request->de,
 				"ve" => $request->ve,
 				"other_languages" => $request->other_language,
-				"money" => $request->money
+				"money" => $request->money,
+				"file" => "[".$json."]"
 			]);
+			
 			return redirect()->back()->with('success', 'success');
 		}
 	}

@@ -27,13 +27,18 @@ class RegistrationVacancyController extends Controller
             return redirect()->back()->withInput()->withErrors($validator->errors())->with('danger', 'err');
         } else {
 			$file = $request->file('resume_file');
-			$path = str_replace("public/", "", $file->store('public/resumes'));
-			$originalName = $file->getClientOriginalName();
+			if($file) {
+                $path = str_replace("public/", "", $file->store('public/resumes'));
+                $originalName = $file->getClientOriginalName();
 
-			$json = response()->json([
-				"download_link" => $path,
-				"original_name" => $originalName
-			]);
+                $json = json_encode ([
+                    "download_link" => $path,
+                    "original_name" => $originalName
+                ]);
+            } else {
+			    $json = null;
+            }
+
 
 			Resume::create([
 				'work_id' => $request->work_id,

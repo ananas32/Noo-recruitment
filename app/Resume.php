@@ -27,4 +27,9 @@ class Resume extends Model
 		"file"
 	];
 
+	public function workId()
+    {
+        return $this->belongsTo(Vacancy::class);
+    }
+
 }
